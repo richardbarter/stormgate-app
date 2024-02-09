@@ -7,7 +7,7 @@ export const fetchLeaderboard = async () => {
   try {
     const response = await axios.get(API_ENDPOINT);
     console.log('response is', response.data);
-    
+    //this may return things that I don't need to utilize when building the leaderboard. Should I only return the stuff I need? If yes, do I do that logic hear, or from the leaderBoardSlice function?
     return response.data;
   } catch (error) {
     console.error('Failed to fetch leaderboard:', error);

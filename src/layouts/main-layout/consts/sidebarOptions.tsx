@@ -1,0 +1,15 @@
+import AddHomeIcon from '@mui/icons-material/AddHome';
+import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+export const sidebarOptions = [
+    {
+        displayName: 'Home',
+        icon: <AddHomeIcon />,
+        pathTo: '/'
+
+    },
+    {
+        displayName: 'Leaderboard',
+        icon: <LeaderboardIcon />,
+        pathTo: '/leaderboard'
+    }
+]

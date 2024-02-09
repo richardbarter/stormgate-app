@@ -8,6 +8,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchLeaderboard } from './leaderboardService';
 
+
+//with the leaderboard type definition, what do I set this to in this example where it is getting an array of the leaderboard data?
 interface LeaderboardState {
   leaderboard: any[]; // Define a more specific type based on your data structure
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
