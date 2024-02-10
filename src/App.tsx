@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Layout from './layouts/main-layout/Layout';
-import { Box, styled } from '@mui/material';
+import { Box } from '@mui/material';
 import { DrawerHeader } from './styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import RoutesMenu from './components/RoutesMenu';
