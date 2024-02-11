@@ -50,7 +50,7 @@ export default function Layout() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Some WebSite Name
           </Typography>
         </Toolbar>
       </AppBar>
@@ -63,7 +63,7 @@ export default function Layout() {
         <Divider />
         <List>
           {sidebarOptions.map((item, index) => (
-            <ListItemLink pathTo={item.pathTo} displayName={item.displayName} icon={item.icon} />
+            <ListItemLink key={index} pathTo={item.pathTo} displayName={item.displayName} icon={item.icon} />
           ))}
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>

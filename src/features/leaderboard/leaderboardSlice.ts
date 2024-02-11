@@ -7,17 +7,64 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { fetchLeaderboard } from './leaderboardService';
+import { LeaderboardEntry } from '../../types/types';
 
 
-//with the leaderboard type definition, what do I set this to in this example where it is getting an array of the leaderboard data?
+// interface LeaderboardState {
+//   leaderboard: any[]; // Define a more specific type based on your data structure
+//   status: 'idle' | 'loading' | 'succeeded' | 'failed';
+//   error: string | null;
+// }
+
+// const initialState: LeaderboardState = {
+//   leaderboard: [],
+//   status: 'idle',
+//   error: null,
+// };
+
+// Define a type for the leaderboard entry
+// type LeaderboardEntry = {
+//   leaderboard_entry_id: string;
+//   leaderboard: string;
+//   player_id: string;
+//   anonymous: boolean; // Fixed typo from 'anynmous' to 'anonymous'
+//   nickname: string;
+//   nickname_discriminator: string;
+//   rank: number;
+//   race: string;
+//   league: string;
+//   tier: number;
+//   mmr: number;
+//   points: number;
+//   wins: number;
+//   losses: number;
+//   ties: number;
+//   matches: number;
+//   win_rate: number;
+// };
+
+// Define the structure of the leaderboard data
+interface LeaderboardData {
+  page: number;
+  count: number;
+  total: number;
+  entries: LeaderboardEntry[];
+}
+
+// Update the LeaderboardState interface to include the new structure
 interface LeaderboardState {
-  leaderboard: any[]; // Define a more specific type based on your data structure
+  leaderboard: LeaderboardData; // Updated to match the expected data structure
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
 }
 
 const initialState: LeaderboardState = {
-  leaderboard: [],
+  leaderboard: {
+    page: 0,
+    count: 0,
+    total: 0,
+    entries: [],
+  },
   status: 'idle',
   error: null,
 };
@@ -36,7 +83,7 @@ const leaderboardSlice = createSlice({
   initialState,
   reducers: {
     remove: (state, action) => {
-      state.leaderboard = state.leaderboard.filter((r) => r.id !== action.payload)
+      state.leaderboard.entries = state.leaderboard.entries.filter((r) => r.leaderboard_entry_id !== action.payload)
 
     }
   },
