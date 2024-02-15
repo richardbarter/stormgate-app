@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks'
 import { fetchLeaderboardData } from './leaderboardSlice';
 import LeaderboardTable from './components/LeaderboardTable';
+import { Container, Typography } from '@mui/material';
 //import { RootState } from '../../app/store';
 //import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 
@@ -42,8 +43,13 @@ const LeaderboardPage = () => {
 
   return (
     <section className="leaderboard-list">
-      <h2>Leaderboard</h2>
-      {renderContent()}
+      <Container>
+        <Typography variant="h2" noWrap>
+          Leaderboard
+        </Typography>
+      
+        {renderContent()}
+      </Container>
     </section>
   );
 
