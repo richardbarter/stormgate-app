@@ -18,6 +18,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { AppBar, Drawer, DrawerHeader } from './layout.styles';
 import { sidebarOptions } from './consts/sidebarOptions'
 import ListItemLink from './components/ListItemLink';
+import { blueGrey, grey, indigo, lightBlue } from '@mui/material/colors';
 
 
 
@@ -35,7 +36,7 @@ export default function Layout() {
 
   return (
     <>
-      <AppBar position="fixed" open={open}>
+      <AppBar position="fixed" open={open} sx={{ bgcolor: '#191922' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -54,7 +55,7 @@ export default function Layout() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer variant="permanent" open={open} PaperProps={{ sx: { bgcolor: '#191922' }}}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}

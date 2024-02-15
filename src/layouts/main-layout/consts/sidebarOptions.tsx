@@ -3,13 +3,13 @@ import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 export const sidebarOptions = [
     {
         displayName: 'Home',
-        icon: <AddHomeIcon />,
+        icon: <AddHomeIcon color="primary" />,
         pathTo: '/'
 
     },
     {
         displayName: 'Leaderboard',
-        icon: <LeaderboardIcon />,
+        icon: <LeaderboardIcon color="primary" />,
         pathTo: '/leaderboard'
     }
 ]
