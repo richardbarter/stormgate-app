@@ -13,11 +13,14 @@ import { blueGrey, grey, indigo, orange, teal } from '@mui/material/colors';
     //#191922
     //`radial-gradient(circle, ${blueGrey[300]} 0%, ${blueGrey[900]} 100%);`
 
+
+    //this background will maybe be used, but doesn't like I can put it in the theme - background default
+    //background: `radial-gradient(circle, #373749 0%, #191922 100%);`
     //minHeight needed else the background color does not cover whole page. Is there a better way to do this?
     return (
       <Box sx={{ display: 'flex', minHeight: '100vh' }}>
         <Layout />
-        <Box component="main" sx={{ flexGrow: 1, p: 3, background: `radial-gradient(circle, #373749 0%, #191922 100%);` }}>
+        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
           <DrawerHeader />
           <RoutesMenu />
           {/* Assuming HomePage is rendered within RoutesMenu or similarly */}

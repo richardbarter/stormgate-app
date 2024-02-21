@@ -10,38 +10,6 @@ import { fetchLeaderboard } from './leaderboardService';
 import { LeaderboardEntry } from '../../types/types';
 
 
-// interface LeaderboardState {
-//   leaderboard: any[]; // Define a more specific type based on your data structure
-//   status: 'idle' | 'loading' | 'succeeded' | 'failed';
-//   error: string | null;
-// }
-
-// const initialState: LeaderboardState = {
-//   leaderboard: [],
-//   status: 'idle',
-//   error: null,
-// };
-
-// Define a type for the leaderboard entry
-// type LeaderboardEntry = {
-//   leaderboard_entry_id: string;
-//   leaderboard: string;
-//   player_id: string;
-//   anonymous: boolean; // Fixed typo from 'anynmous' to 'anonymous'
-//   nickname: string;
-//   nickname_discriminator: string;
-//   rank: number;
-//   race: string;
-//   league: string;
-//   tier: number;
-//   mmr: number;
-//   points: number;
-//   wins: number;
-//   losses: number;
-//   ties: number;
-//   matches: number;
-//   win_rate: number;
-// };
 
 // Define the structure of the leaderboard data
 interface LeaderboardData {

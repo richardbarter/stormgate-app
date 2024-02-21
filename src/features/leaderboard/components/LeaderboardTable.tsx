@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { LeaderboardEntry } from '../../../types/types';
+import { Link } from 'react-router-dom';
 
 // Define a type for the leaderboard entry
 //what if api changes the response, would this then break?
@@ -48,7 +49,11 @@ const LeaderboardTable: React.FC<LeaderboardData> = ({ leaderboard }) => {
               <TableCell component="th" scope="row">
                 {entry.rank}
               </TableCell>
-              <TableCell>{`${entry.nickname}#${entry.nickname_discriminator}`}</TableCell>
+              <TableCell>
+                <Link to={`/player/${entry.player_id}`}>
+                  {`${entry.nickname}#${entry.nickname_discriminator}`}
+                </Link>
+              </TableCell>
               <TableCell align="right">{entry.league}</TableCell>
               <TableCell align="right">{entry.mmr.toFixed(2)}</TableCell>
               <TableCell align="right">{entry.wins}</TableCell>

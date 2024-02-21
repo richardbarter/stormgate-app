@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import leaderboardReducer from '../features/leaderboard/leaderboardSlice';
+import playerReducer from '../features/player/playerSlice';
 
 //will add player to this soon.
 export const store = configureStore({
   reducer: {
-    leaderboard: leaderboardReducer
+    leaderboard: leaderboardReducer,
+    player: playerReducer
   },
 });
 

@@ -18,7 +18,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { AppBar, Drawer, DrawerHeader } from './layout.styles';
 import { sidebarOptions } from './consts/sidebarOptions'
 import ListItemLink from './components/ListItemLink';
-import { blueGrey, grey, indigo, lightBlue } from '@mui/material/colors';
+//import { blueGrey, grey, indigo, lightBlue } from '@mui/material/colors';
 
 
 
@@ -50,7 +50,7 @@ export default function Layout() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" color="white">
             Some WebSite Name
           </Typography>
         </Toolbar>
@@ -66,28 +66,7 @@ export default function Layout() {
           {sidebarOptions.map((item, index) => (
             <ListItemLink key={index} pathTo={item.pathTo} displayName={item.displayName} icon={item.icon} />
           ))}
-          {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))} */}
+          
         </List>
         <Divider />
         {/* <List>
