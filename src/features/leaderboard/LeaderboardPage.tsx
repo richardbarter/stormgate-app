@@ -4,7 +4,6 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks'
 import { fetchLeaderboardData } from './leaderboardSlice';
 import LeaderboardTable from './components/LeaderboardTable';
 import { Container, Typography } from '@mui/material';
-//import { RootState } from '../../app/store';
 //import { Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material';
 
 const LeaderboardPage = () => {
