@@ -24,6 +24,7 @@ import ListItemLink from './components/ListItemLink';
 
 export default function Layout() {
   const theme = useTheme();
+  //const { palette } = useTheme();
   const [open, setOpen] = React.useState(true);
 
   const handleDrawerOpen = () => {
@@ -39,18 +40,18 @@ export default function Layout() {
       <AppBar position="fixed" open={open} sx={{ bgcolor: '#191922' }}>
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
               marginRight: 5,
               ...(open && { display: 'none' }),
+              color: theme.palette.secondary.main
             }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: theme.palette.primary.main }} />
           </IconButton>
-          <Typography variant="h6" noWrap component="div" color="white">
+          <Typography variant="h6" noWrap component="div" color={theme.palette.grey[100]}>
             Some WebSite Name
           </Typography>
         </Toolbar>
